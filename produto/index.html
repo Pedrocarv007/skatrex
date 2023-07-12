@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Adicionar Produto
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body class="">
+        <div class="wrapper">
+
+            <div class="esquerda">
+
+                <img class="preview" id="file-ip-1-preview">
+
+                
+
+                <div class="form-input">
+                    <label for="file-ip-1">Upload Image</label>
+                    <input  type="file" name="my_image" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                </div>
+      
+            </div>
+            <div class="direita">
+              <form action="php.php" method="post">
+                <div class="container">
+                  <div class="did-floating-label-content">
+                    <input nome="prod_name" class="did-floating-input" type="text" placeholder=" ">
+                    <label class="did-floating-label">Nome do Produto</label>
+                  </div>
+                  <div class="did-floating-label-content">
+                    <select nome="prod_category" class="did-floating-select" onclick="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);" value="">
+                      <option value=""></option>
+                      <option value="1">Calçados</option>
+                      <option value="2">Acessórios</option>
+                      <option value="3">Skate</option>
+                      <option value="4">Roupa</option>
+                    </select>
+                    <label class="did-floating-label">Categoria</label>
+                  </div>
+                  <div class="did-floating-label-content input-group">
+                      <span class="input-group-prepend">
+                                      <div class="input-group-text">€</div>
+                                  </span>
+                    <input name="prod_price" class="did-floating-input" type="number" placeholder=" ">
+                    <label class="did-floating-label">Preço</label>
+                  </div>
+                    <div class="did-floating-label-content">
+                    <input name="Stock" class="did-floating-input" type="number" placeholder=" ">
+                    <label class="did-floating-label">Stock</label>
+                  </div>
+
+                  </div>
+                  <input class="submeter" style="cursor: pointer;" type="submit" value="Adicionar Produto" name="Adicionar_Produto" onClick="refresh">
+              </form>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
